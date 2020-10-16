@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Login from'./Login';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <h1>Hello!</h1>
       {/* Spotify logo */}
       {/* Login with spotify button */}
+      <Login />
     </div>
   );
 }
