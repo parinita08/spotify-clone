@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Login from'./Login';
+import { getTokenFromUrl } from './spotify';
 
 function App() {
+  useEffect(() => {
+    const token = getTokenFromUrl();
+    console.log("token herre", token);
+  }, []);
+
+
   return (
     <div className="app">
-      <h1>Hello!</h1>
-      {/* Spotify logo */}
-      {/* Login with spotify button */}
       <Login />
     </div>
   );
