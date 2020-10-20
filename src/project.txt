@@ -1,0 +1,4 @@
+3:34:04
+
+Issues :
+1. Footer__left css is not doing what it is supposed to do.
