@@ -2,6 +2,11 @@
 margin: 0;
 }
 
+/* Removed the scrollbar display on the screen, but can still scroll*/
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
