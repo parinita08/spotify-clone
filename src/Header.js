@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { useEffect } from "react";
 import "./Header.css";
 import SearchIcon from '@material-ui/icons/Search';
 import {Avatar} from "@material-ui/core";
 import { useDataLayerValue } from "./DataLayer";
 
-function Header() {
+function Header({spotify}) {
     const [{ user }, dispatch] = useDataLayerValue();
 
     return (
@@ -16,9 +17,11 @@ function Header() {
                   type="text"
                 />
             </div>
+
             <div className="header__right">
-            <Avatar alt="you" src={user?.images[0].url} />
-             <h4>{user?.display_name}</h4>
+                {/* Gets the users name and dp on the top right corner */}
+                <Avatar alt={user?.display_name} src={user?.images[0]?.url} />
+                <h4>{user?.display_name}</h4>
             </div>
         </div>
     );
