@@ -5,6 +5,7 @@ import { getTokenFromUrl } from './spotify';
 import SpotifyWebApi from "spotify-web-api-js";
 import Player from "./Player";
 import { useDataLayerValue } from "./DataLayer";
+import { responsiveFontSizes } from '@material-ui/core';
 
 const spotify = new SpotifyWebApi();
 
@@ -40,6 +41,14 @@ function App() {
           playlists: playlists,
         });
       });
+
+      // 37i9dQZEVXcOD7UfqsNwpA -> url for spotify 
+      spotify.getPlaylist('37i9dQZEVXcOD7UfqsNwpA').then(response => 
+        dispatch({
+          type: "SET_DISCOVER_WEEKLY",
+          discover_weekly: response,
+        })
+      )
     }
   }, []);
  
